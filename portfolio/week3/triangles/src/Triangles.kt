@@ -1,6 +1,4 @@
-// COMP2850 Portfolio: Week 2
-// Functions for working with triangle geometry
-
+// COMP2850 Portfolio: Week 3
 import kotlin.math.sqrt
 
 typealias Triangle = Triple<Double,Double,Double>
@@ -14,6 +12,10 @@ fun isValidTriangle(triangle: Triangle): Boolean {
 }
 
 fun triangleArea(triangle: Triangle): Double {
+    if (!isValidTriangle(triangle)) {
+        throw IllegalArgumentException("Invalid triangle")
+    }
+
     val (a, b, c) = triangle
 
     val s = (a + b + c) / 2.0
