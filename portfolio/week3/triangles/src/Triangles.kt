@@ -1,4 +1,3 @@
-// COMP2850 Portfolio: Week 3
 import kotlin.math.sqrt
 
 typealias Triangle = Triple<Double,Double,Double>
@@ -13,7 +12,7 @@ fun isValidTriangle(triangle: Triangle): Boolean {
 
 fun triangleArea(triangle: Triangle): Double {
     if (!isValidTriangle(triangle)) {
-        throw IllegalArgumentException("Invalid triangle")
+        throw IllegalArgumentException()
     }
 
     val (a, b, c) = triangle
